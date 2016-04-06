@@ -7,13 +7,25 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
   
   @IBOutlet weak var tableView: UITableView!
   
+  let dataSource$ = Observable.just(SurveyQuestion.allValues)
+  let disposeBag = DisposeBag()
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    dataSource$
+      .bindTo(tableView.rx_itemsWithCellIdentifier("SurveyQuestionCell")) { (row, surveyQuestion: SurveyQuestion, cell: SurveyQuestionCell) in
+        
+        cell.questionLabel.text = surveyQuestion.rawValue
+        
+      }.addDisposableTo(disposeBag)
   }
   
 }
