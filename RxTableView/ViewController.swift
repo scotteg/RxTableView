@@ -26,6 +26,19 @@ class ViewController: UIViewController {
         cell.questionLabel.text = surveyQuestion.rawValue
         
       }.addDisposableTo(disposeBag)
+    
+    tableView.rx_setDelegate(self).addDisposableTo(disposeBag)
+  }
+  
+}
+
+extension ViewController: UITableViewDelegate {
+  
+  func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let label = UILabel()
+    label.text = "Section \(section)"
+    label.backgroundColor = UIColor.lightGrayColor()
+    return label
   }
   
 }
