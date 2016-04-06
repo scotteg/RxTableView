@@ -15,6 +15,7 @@
 		D202CD0B1CB5569B004E68EF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D202CD091CB5569B004E68EF /* LaunchScreen.storyboard */; };
 		D202CD131CB55A64004E68EF /* SurveyQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202CD121CB55A64004E68EF /* SurveyQuestionCell.swift */; };
 		D202CD151CB5676B004E68EF /* SurveyQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202CD141CB5676B004E68EF /* SurveyQuestion.swift */; };
+		D202CD171CB58D0F004E68EF /* UITableView+Rx.swift in Sources */ = {isa = PBXBuildFile; fileRef = D202CD161CB58D0F004E68EF /* UITableView+Rx.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		D202CD0C1CB5569B004E68EF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D202CD121CB55A64004E68EF /* SurveyQuestionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyQuestionCell.swift; sourceTree = "<group>"; };
 		D202CD141CB5676B004E68EF /* SurveyQuestion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyQuestion.swift; sourceTree = "<group>"; };
+		D202CD161CB58D0F004E68EF /* UITableView+Rx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+Rx.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				D202CD0C1CB5569B004E68EF /* Info.plist */,
 				D202CD121CB55A64004E68EF /* SurveyQuestionCell.swift */,
 				D202CD141CB5676B004E68EF /* SurveyQuestion.swift */,
+				D202CD161CB58D0F004E68EF /* UITableView+Rx.swift */,
 			);
 			path = RxTableView;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D202CD031CB5569B004E68EF /* ViewController.swift in Sources */,
+				D202CD171CB58D0F004E68EF /* UITableView+Rx.swift in Sources */,
 				D202CD151CB5676B004E68EF /* SurveyQuestion.swift in Sources */,
 				D202CD011CB5569B004E68EF /* AppDelegate.swift in Sources */,
 				D202CD131CB55A64004E68EF /* SurveyQuestionCell.swift in Sources */,

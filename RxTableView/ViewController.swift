@@ -15,6 +15,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
   let dataSource$ = Observable.just(SurveyQuestion.allValues)
+  let labelWidthConstraintConstant$ = Variable<CGFloat>(0.0)
   let disposeBag = DisposeBag()
   
   override func viewDidLoad() {
@@ -25,9 +26,23 @@ class ViewController: UIViewController {
         
         cell.questionLabel.text = surveyQuestion.rawValue
         
+        cell.questionLabel.sizeToFit()
+        
+        self.labelWidthConstraintConstant$.value = max(self.labelWidthConstraintConstant$.value, cell.questionLabel.bounds.size.width)
+        
+        self.labelWidthConstraintConstant$.asDriver()
+          .distinctUntilChanged()
+          .drive(cell.questionLabelWidthConstraint.rx_constant)
+          .addDisposableTo(cell.disposeBag)
+        
       }.addDisposableTo(disposeBag)
     
     tableView.rx_setDelegate(self).addDisposableTo(disposeBag)
+    
+    tableView.rx_didEndDisplayingCell.asObservable()
+      .map { $0.cell as! SurveyQuestionCell }
+      .subscribeNext { $0.disposeBag = DisposeBag() }
+      .addDisposableTo(disposeBag)
   }
   
 }

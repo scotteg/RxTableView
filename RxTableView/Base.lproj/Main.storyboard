@@ -39,8 +39,9 @@
                                                     <rect key="frame" x="8" y="17" width="584" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jMh-w2-RjQ">
-                                                            <rect key="frame" x="0.0" y="4" width="42" height="21"/>
+                                                            <rect key="frame" x="0.0" y="4.5" width="42" height="21"/>
                                                             <constraints>
+                                                                <constraint firstAttribute="width" constant="42" id="ZyM-SJ-J9m"/>
                                                                 <constraint firstAttribute="height" constant="21" placeholder="YES" id="r60-gf-sIN"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -63,6 +64,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="questionLabel" destination="jMh-w2-RjQ" id="vKm-SP-5wH"/>
+                                            <outlet property="questionLabelWidthConstraint" destination="ZyM-SJ-J9m" id="gkE-T1-Lek"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

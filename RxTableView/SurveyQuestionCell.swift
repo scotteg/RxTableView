@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import RxSwift
 
 class SurveyQuestionCell: UITableViewCell {
   
   @IBOutlet weak var questionLabel: UILabel!
+  @IBOutlet weak var questionLabelWidthConstraint: NSLayoutConstraint!
+  
+  var disposeBag = DisposeBag()
   
 }
