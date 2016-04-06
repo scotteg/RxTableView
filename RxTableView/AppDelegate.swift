@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  RxTableView
 //
-//  Created by Scott Gardner on 4/6/16.
+//  Created by Scott Gardner on 4/7/16.
 //  Copyright © 2016 Scott Gardner. All rights reserved.
 //
 
